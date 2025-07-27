@@ -15,6 +15,10 @@
   <img src="http://readme-typing-svg.herokuapp.com?color=ff1493&center=true&vCenter=true&lines=28/07/2025" alt="Release date typing"/>
 </p>
 
+<p align="center">
+  <img src="https://i.imgur.com/LyHic3i.gif" width="280"/>
+</p>
+
 ---
 
 ## 🌟 পরিচিতি
@@ -45,11 +49,6 @@
 👉 [এখানে ক্লিক করে জয়েন করুন](https://m.me/j/AbZnvggXXnMoLZd7/)
 
 ---
-
-## 🎞️ এনিমেশন প্রিভিউ
-
-বট কেমনভাবে এনিমেটেড হয়, সেটা একবার দেখে নিতে চান?  
-👉 [🔍 এনিমেশন দেখুন](./animation.html)
 
 <p align="center">
   <img src="https://i.imgur.com/LyHic3i.gif" width="280"/>
