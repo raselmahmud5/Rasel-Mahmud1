@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <strong>👑 Owner:</strong><br>
+  <strong>👑 𝐎𝐰𝐧𝐞𝐫:</strong><br>
   <img src="http://readme-typing-svg.herokuapp.com?color=ff69b4&center=true&vCenter=true&lines=𝗥𝗮𝘀𝗲𝗹+𝗠𝗮𝗵𝗺𝘂𝗱" alt="Owner typing"/><br><br>
-  <strong>📅 Released:</strong><br>
+  <strong>📅 𝐑𝐞𝐥𝐞𝐚𝐬𝐞𝐝:</strong><br>
   <img src="http://readme-typing-svg.herokuapp.com?color=ff1493&center=true&vCenter=true&lines=28/07/2025" alt="Release date typing"/>
 </p>
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 🖼️ বটের রূপ
+## 🖼️ 𝐁𝐨𝐭 𝐏𝐫𝐨𝐟𝐢𝐥𝐞 ✨
 
 <p align="center">
   <img src="https://i.imgur.com/mWuHL8E.png" alt="Bot Image" width="300"/>
@@ -37,8 +37,9 @@
 
 ## 🚀 ব্যবহারবিধি (How to use)
 
-১. নিচের Messenger গ্রুপে জয়েন করুন  
+১. নিচের Messenger গ্রুপে জয়েন করুন ✅
 ২. কমান্ড লিখুন আর ম্যাজিক উপভোগ করুন 🎉
+৩. বটের কমান্ড জানতে *help লিখতে হবে 🌺
 
 🔗 **Messenger Group:**  
 👉 [এখানে ক্লিক করে জয়েন করুন](https://m.me/j/AbZnvggXXnMoLZd7/)
@@ -60,7 +61,7 @@
 
 📘 **Facebook (Main):** [Rasel Mahmud](https://www.facebook.com/raselmahmud.q)  
 👤 **Facebook (Alt):** [View Profile](https://www.facebook.com/iiii.482394)  
-📺 **YouTube Channel:** [✨](https://youtube.com/@rmsilentgaming?si=jdMyMhECKt2iHCh-)
+📺 **YouTube Channel:** [𝐑𝐌 𝐒𝐈𝐋𝐄𝐍𝐓 𝐊𝐈𝐋𝐋𝐄𝐑](https://youtube.com/@rmsilentgaming?si=jdMyMhECKt2iHCh-)
 
 ---
 
