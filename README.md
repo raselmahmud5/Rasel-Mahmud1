@@ -66,7 +66,7 @@
 <p align="center">
   <img src="https://i.imgur.com/LyHic3i.gif" width="280"/>
 </p>
-🪄 Thanks for visiting  
+									🪄 Thanks for visiting  
 🔊 𝑴𝑨𝑮𝑰𝑪 𝑶𝑭 𝑺𝑶𝑼𝑵𝑫 ✨  
 Made with ❤️ by 𝑹𝒂𝒔𝒆𝒍 𝑴𝒂𝒉𝒎𝒖𝒅
 <p align="center">
