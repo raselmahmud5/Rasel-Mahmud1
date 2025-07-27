@@ -29,6 +29,11 @@
 
 ---
 [Animation Preview](./animation.html)
-<p align="center">
-  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=cyan&center=true&vCenter=true&multiline=false&lines=`༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾`" alt="">
-  > Release Date : 28/08/2025 
+<pre>
+╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
+┃          𝐁𝐎𝐓  𝐍𝐀𝐌𝐄                ┃
+┃  <img src="http://readme-typing-svg.herokuapp.com?color=cyan&center=true&vCenter=true&lines=༊✨MAGIC+OF+SOUND✨᯾">             ┃
+┃  <img src="http://readme-typing-svg.herokuapp.com?color=yellow&center=true&vCenter=true&lines=📅+Release+Date%3A+28%2F08%2F2025">     ┃
+┃  <img src="http://readme-typing-svg.herokuapp.com?color=lime&center=true&vCenter=true&lines=👤+Owner%3A+𝗥𝗮𝘀𝗲𝗹+𝗠𝗮𝗵𝗺𝘂𝗱">              ┃
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+</pre>
