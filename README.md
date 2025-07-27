@@ -68,7 +68,7 @@
 </p>
 
 <p align="center">
-  <img src="https://imgur.com/a/lcQ6FCh.gif" width="280"/>
+  <img src="https://pin.it/5R1KVPW7e" width="280"/>
 </p>
 
 🪄 Thanks for visiting  
