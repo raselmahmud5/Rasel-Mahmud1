@@ -66,6 +66,11 @@
 <p align="center">
   <img src="https://i.imgur.com/LyHic3i.gif" width="280"/>
 </p>
+
+<p align="center">
+  <img src="https://imgur.com/a/lcQ6FCh" width="280"/>
+</p>
+
 🪄 Thanks for visiting  
 
 🔊 𝑴𝑨𝑮𝑰𝑪 𝑶𝑭 𝑺𝑶𝑼𝑵𝑫 ✨  
