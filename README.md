@@ -74,7 +74,3 @@ Made with ❤️ by 𝑹𝒂𝒔𝒆𝒍 𝑴𝒂𝒉𝒎𝒖𝒅
 <p align="center">
   <img src="https://i.imgur.com/LyHic3i.gif" width="280"/>
 </p>
-
-</p/> align="center">
-<img src="
-img.save("thank_you_image.png")
