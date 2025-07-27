@@ -32,7 +32,7 @@
 
 ---
 
-<img src='https://i.imgur.com/ePDUcck.jpeg'/>
+<img src='[https://i.imgur.com/ePDUcck.jpeg](https://i.imgur.com/LyHic3i.gif)'/>
 
 <p align="center">
   <strong>𝐁𝐎𝐓 𝐍𝐀𝐌𝐄</strong><br>
@@ -44,4 +44,4 @@
   📅 Release Date:<img src="http://readme-typing-svg.herokuapp.com?color=ff1493&center=true&vCenter=true&lines=28/07/2025" alt="Release date typing"/>
 </p>
 
-<img src='https://i.imgur.com/ePDUcck.jpeg'/>
+<img src='[https://i.imgur.com/ePDUcck.jpeg](https://i.imgur.com/LyHic3i.gif)'/>
