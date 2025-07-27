@@ -48,8 +48,6 @@
 🔗 **Messenger Group:**  
 👉 [এখানে ক্লিক করে জয়েন করুন](https://m.me/j/AbZnvggXXnMoLZd7/)
 
----
-
 <p align="center">
   <img src="https://i.imgur.com/LyHic3i.gif" width="280"/>
 </p>
