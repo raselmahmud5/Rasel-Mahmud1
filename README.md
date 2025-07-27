@@ -29,14 +29,19 @@
 
 ---
 [Animation Preview](./animation.html)
+
+---
+
+<img src='https://i.imgur.com/ePDUcck.jpeg'/>
+
 <p align="center">
   <strong>𝐁𝐎𝐓 𝐍𝐀𝐌𝐄</strong><br>
   
   <img src="http://readme-typing-svg.herokuapp.com?color=00ffff&center=true&vCenter=true&lines=༊✨MAGIC+OF+SOUND✨᯾" alt="Magic of Sound typing"/><br>
   
-  👤 Owner: 
-  <img src="http://readme-typing-svg.herokuapp.com?color=ff69b4&center=true&vCenter=true&lines=𝗥𝗮𝘀𝗲𝗹+𝗠𝗮𝗵𝗺𝘂𝗱" alt="Owner typing"/><br>
+  👤 Owner:<img src="http://readme-typing-svg.herokuapp.com?color=ff69b4&center=true&vCenter=true&lines=𝗥𝗮𝘀𝗲𝗹+𝗠𝗮𝗵𝗺𝘂𝗱" alt="Owner typing"/><br>
   
-  📅 Release Date: 
-  <img src="http://readme-typing-svg.herokuapp.com?color=ff1493&center=true&vCenter=true&lines=28/07/2025" alt="Release date typing"/>
+  📅 Release Date:<img src="http://readme-typing-svg.herokuapp.com?color=ff1493&center=true&vCenter=true&lines=28/07/2025" alt="Release date typing"/>
 </p>
+
+<img src='https://i.imgur.com/ePDUcck.jpeg'/>
