@@ -29,12 +29,14 @@
 
 ---
 [Animation Preview](./animation.html)
-<pre>
-╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-┃          𝐁𝐎𝐓  𝐍𝐀𝐌𝐄                ┃
-┃  <img src="http://readme-typing-svg.herokuapp.com?color=cyan&center=true&vCenter=true&lines=༊✨MAGIC+OF+SOUND✨᯾;28/08/2025;𝗥𝗮𝘀𝗲𝗹+𝗠𝗮𝗵𝗺𝘂𝗱"> ┃
-┃                                    ┃
-┃   👤 Owner: 𝗥𝗮𝘀𝗲𝗹 𝗠𝗮𝗵𝗺𝘂𝗱              ┃
-┃   📅 Release Date: 28/08/2025       ┃
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
-</pre>
+<p align="center">
+  <strong>𝐁𝐎𝐓 𝐍𝐀𝐌𝐄</strong><br>
+  
+  <img src="http://readme-typing-svg.herokuapp.com?color=00ffff&center=true&vCenter=true&lines=༊✨MAGIC+OF+SOUND✨᯾" alt="Magic of Sound typing"/><br>
+  
+  👤 Owner: 
+  <img src="http://readme-typing-svg.herokuapp.com?color=ff69b4&center=true&vCenter=true&lines=𝗥𝗮𝘀𝗲𝗹+𝗠𝗮𝗵𝗺𝘂𝗱" alt="Owner typing"/><br>
+  
+  📅 Release Date: 
+  <img src="http://readme-typing-svg.herokuapp.com?color=ff1493&center=true&vCenter=true&lines=28/07/2025" alt="Release date typing"/>
+</p>
