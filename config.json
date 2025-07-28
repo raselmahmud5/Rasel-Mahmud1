@@ -10,19 +10,71 @@
     "100024220812646"
   ],
   "GITHUB": "https://github.com/raselmahmud5/Rasel-Mahmud1.git",
-  "PREFIX": "*",
+  "PREFIX": "!",
   "ADMINBOT": [
     "61571550050635",
     "100024220812646"
   ],
   "DEVELOPER": "Rasel Mahmud",
-  "ADMINBOX": true,
-  "AUTO_RESPOND": true,
+  "LANGUAGE": "bn",
   "PORT": 3000,
+
+  "keyActive": "rasel-premium-2025",  // এখানে তোমার activation key দাও
+  "DeveloperMode": false,
+  "autoCreateDB": true,
+  "notiGroup": true,
+  "NOTIFICATION": true,
+  "allowInbox": true,
+  "autoClean": true,
+  "commandDisabled": [],
+  "eventDisabled": [],
   "LOGGING": true,
-  "DATABASE": {
-    "AUTO_CREATE": true,
-    "TYPE": "json"
+  "AUTO_RESPOND": true,
+  "ADMINBOX": true,
+
+  "reactUnsend": ["💩", "😡", "👎", "😠", "🚮", "🤬"],
+  "adminOnly": true,
+  "ndhOnly": true,
+  "adminPaOnly": true,
+
+  "adminUpdate": {
+    "autoUnsend": true,
+    "sendNoti": true,
+    "timeToUnsend": 10
   },
-  "LANGUAGE": "bn"
+
+  "help": {
+    "autoUnsend": true,
+    "delayUnsend": 120
+  },
+
+  "autoReplyRules": {
+    "enable": false,
+    "keywords": {
+      "hello": "ওহে! আমি এখানে আছি 🪄",
+      "bye": "আবার দেখা হবে 👋"
+    }
+  },
+
+  "mentionReaction": {
+    "enable": false,
+    "defaultEmoji": "👀"
+  },
+
+  "dailyScheduler": {
+    "enable": false,
+    "time": "08:00",
+    "message": "🌞 শুভ সকাল! নতুন দিন, নতুন সম্ভাবনা।"
+  },
+
+  "apiIntegration": {
+    "enableWeather": false,
+    "weatherApiKey": "",
+    "defaultCity": "Dhaka"
+  },
+
+  "antiSpam": {
+    "enable": false,
+    "cooldownTime": 5
+  }
 }
