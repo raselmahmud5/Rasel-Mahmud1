@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 
 function logger(content, type = "INFO") {
   const time = new Date().toLocaleTimeString("bn-BD", { hour12: true });
@@ -39,4 +39,4 @@ function logger(content, type = "INFO") {
   console.log(chalk.gray(`[ ${time} ]`), tagColor(`[ ${type} ]`), chalk.white(content));
 }
 
-module.exports = logger;
+export default logger;
