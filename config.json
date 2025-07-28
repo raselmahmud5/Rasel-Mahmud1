@@ -10,7 +10,7 @@
     "100024220812646"
   ],
   "GITHUB": "https://github.com/raselmahmud5/Rasel-Mahmud1.git",
-  "PREFIX": "!",
+  "PREFIX": "*",
   "ADMINBOT": [
     "61571550050635",
     "100024220812646"
@@ -70,24 +70,24 @@
   },
 
   "mentionReaction": {
-    "enable": false,
+    "enable": true,
     "defaultEmoji": "👀"
   },
 
   "dailyScheduler": {
-    "enable": false,
+    "enable": true,
     "time": "08:00",
     "message": "🌞 শুভ সকাল! নতুন দিন, নতুন সম্ভাবনা।"
   },
 
   "apiIntegration": {
-    "enableWeather": false,
+    "enableWeather": true,
     "weatherApiKey": "",
     "defaultCity": "Dhaka"
   },
 
   "antiSpam": {
-    "enable": false,
+    "enable": true,
     "cooldownTime": 5
   }
 }
