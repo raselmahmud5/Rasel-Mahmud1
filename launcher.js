@@ -1,12 +1,17 @@
-const { spawn } = require("child_process");
-const express = require("express");
-const path = require("path");
+import { spawn } from "child_process";
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/", function (_, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(join(__dirname, "index.html"));
 });
 
 app.listen(port, () => {
@@ -18,7 +23,7 @@ let retryCount = 0;
 const maxRetries = 5;
 
 function launchBot() {
-  botProcess = spawn("node", ["RASEL.js"], { stdio: "inherit" });
+  botProcess = spawn("node", ["RASEL.js"], { stdio: "inherit", shell: true });
 
   botProcess.on("close", (code) => {
     console.log(`Bot exited with code ${code}`);
