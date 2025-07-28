@@ -1,0 +1,28 @@
+{
+  "BOTNAME": "༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾",
+  "OWNERNAME": "Rasel Mahmud",
+  "OWNER_FB": [
+    "https://www.facebook.com/raselmahmud.q",
+    "https://www.facebook.com/iiii.482394"
+  ],
+  "OWNER_UID": [
+    "61571550050635",
+    "100024220812646"
+  ],
+  "GITHUB": "https://github.com/raselmahmud5/Rasel-Mahmud1.git",
+  "PREFIX": "*",
+  "ADMINBOT": [
+    "61571550050635",
+    "100024220812646"
+  ],
+  "DEVELOPER": "Rasel Mahmud",
+  "ADMINBOX": true,
+  "AUTO_RESPOND": true,
+  "PORT": 3000,
+  "LOGGING": true,
+  "DATABASE": {
+    "AUTO_CREATE": true,
+    "TYPE": "json"
+  },
+  "LANGUAGE": "bn"
+}
