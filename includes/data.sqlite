@@ -1,12 +1,1 @@
-CREATE TABLE IF NOT EXISTS users (
-  uid TEXT PRIMARY KEY,
-  name TEXT,
-  fb_link TEXT,
-  is_owner INTEGER DEFAULT 0,
-  is_vip INTEGER DEFAULT 0,
-  bot_name TEXT
-);
-
-INSERT INTO users (uid, name, fb_link, is_owner, is_vip, bot_name) VALUES
-('61571550050635', 'Rasel Mahmud', 'https://www.facebook.com/raselmahmud.q', 1, 1, '༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾'),
-('100024220812646', 'Rasel Mahmud', 'https://www.facebook.com/iiii.482394', 1, 1, '༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾');
+https://l.facebook.com/l.php?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft59.2708-21%2F524701104_597295113223380_1126587871433232515_n.sqlite%2Fdata-1.sqlite%3F_nc_cat%3D104%26ccb%3D1-7%26_nc_sid%3D2b0e22%26_nc_eui2%3DAeGDhpZiAN-mEWwrYf5KHnkf-9e2kRtNqvr717aRG02q-uKnLj0Mw2IfpfDAsg97f9petXlqVwMUyzQ6kc6xzD1A%26_nc_ohc%3D64G8x-mjUbkQ7kNvwFk_pzI%26_nc_oc%3DAdkS47jQEhvt54p78My_pFhO3VtzYqX7JjGqzqGtsXOkU0RAXutKkHxDs44RQh01DRs%26_nc_zt%3D7%26_nc_ht%3Dcdn.fbsbx.com%26_nc_gid%3DH30flbLV7Ked_LJTiswsmg%26oh%3D03_Q7cD2wGRM0NgiNtrhYlNBX8weLZk-kSdPAMgG_PwS_5u9GyEdg%26oe%3D68896AAD%26dl%3D1&h=AT0AQAQGhUjZBthLIRN2ucPa8K0wFVvDicKvotlS_0iCrHJ_S1SbkLr-mAA-zAuQIQTbONFsihDAYseNEf-zcIB7cv_gnwHMN6TVsoK0e8__kvEeofA6oyOcwTQ0FpCn
