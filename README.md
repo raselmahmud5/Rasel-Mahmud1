@@ -68,7 +68,7 @@
 </p>
 
 <p align="center">
-  <img src="https://imgur.com/a/lcQ6FCh" alt="hus" width="300"/>
+  <img src="https://i.imgur.com/LyHic3i.gif" width="280"/>
 </p>
 
 🪄 Thanks for visiting  
