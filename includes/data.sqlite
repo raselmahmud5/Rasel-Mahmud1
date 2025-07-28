@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS users (
+  uid TEXT PRIMARY KEY,
+  name TEXT,
+  fb_link TEXT,
+  is_owner INTEGER DEFAULT 0,
+  is_vip INTEGER DEFAULT 0,
+  bot_name TEXT
+);
+
+INSERT INTO users (uid, name, fb_link, is_owner, is_vip, bot_name) VALUES
+('61571550050635', 'Rasel Mahmud', 'https://www.facebook.com/raselmahmud.q', 1, 1, '༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾'),
+('100024220812646', 'Rasel Mahmud', 'https://www.facebook.com/iiii.482394', 1, 1, '༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾');
