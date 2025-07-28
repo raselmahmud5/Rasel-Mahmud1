@@ -19,7 +19,7 @@
   "LANGUAGE": "bn",
   "PORT": 3000,
 
-  "keyActive": "Vip on",  // এখানে তোমার activation key দাও
+  "keyActive": "Vip",  // এখানে তোমার activation key দাও
   "DeveloperMode": false,
   "autoCreateDB": true,
   "notiGroup": true,
