@@ -79,3 +79,31 @@
 <p align="center">
   <img src="https://i.imgur.com/LyHic3i.gif" width="280"/>
 </p>
+
+.github/workflows/nodejs.yml
+
+name: Rasel Bot CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run bot launcher
+        run: node launcher.js
