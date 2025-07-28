@@ -68,7 +68,7 @@
 </p>
 
 <p align="center">
-  <img src="https://imgur.com/a/lcQ6FCh" alt="💬 শেষ কিছু কথা Image" width="300"/>
+  <img src="https://imgur.com/a/dOz4925" alt="💬 শেষ কিছু কথা Image" width="300"/>
 </p>
 
 🪄 Thanks for visiting  
