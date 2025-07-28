@@ -1,1 +1,40 @@
 
+{
+  "name": "magic-of-sound-bot",
+  "version": "1.0.0",
+  "description": "A Messenger bot named ༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾ developed by Rasel Mahmud.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "bot": "node RASEL.js"
+  },
+  "keywords": [
+    "messenger",
+    "facebook",
+    "bot",
+    "magic",
+    "sound",
+    "rasel",
+    "bangla",
+    "auto-reply",
+    "anti-spam"
+  ],
+  "author": "Rasel Mahmud",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raselmahmud5/Rasel-Mahmud1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raselmahmud5/Rasel-Mahmud1/issues"
+  },
+  "homepage": "https://github.com/raselmahmud5/Rasel-Mahmud1#readme"
+}
