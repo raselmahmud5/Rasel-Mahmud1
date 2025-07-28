@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Messenger bot named ༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾ developed by Rasel Mahmud.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "bot": "node RASEL.js"
