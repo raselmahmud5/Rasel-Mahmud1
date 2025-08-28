@@ -1,24 +1,5 @@
 {
-  "BOTNAME": "༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾",
-  "OWNERNAME": "Rasel Mahmud",
-  "OWNER_FB": [
-    "https://www.facebook.com/raselmahmud.q",
-    "https://www.facebook.com/iiii.482394"
-  ],
-  "OWNER_UID": [
-    "61571550050635",
-    "100024220812646"
-  ],
-  "GITHUB": "https://github.com/raselmahmud5/Rasel-Mahmud1.git",
-  "PREFIX": "*",
-  "ADMINBOT": [
-    "61571550050635",
-    "100024220812646"
-  ],
-  "DEVELOPER": "Rasel Mahmud",
-  "LANGUAGE": "bn",
-  "PORT": 3000,
-
+  "language": "en",
   "keyActive": "",
   "DeveloperMode": false,
   "autoCreateDB": true,
@@ -28,66 +9,67 @@
   "autoClean": true,
   "commandDisabled": [],
   "eventDisabled": [],
-  "LOGGING": true,
-  "AUTO_RESPOND": true,
-  "ADMINBOX": true,
-
+  "EMAIL": "",
+  "PASSWORD": "",
+  "OTPKEY": "",
+  "BOTNAME": "༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾",
+  "PREFIX": "*",
+  "ADMINBOT": [
+    "61571550050635",
+    "100024220812646"
+  ],
+  "NDH": [],
+  "DATABASE": {
+    "sqlite": {
+      "storage": "data.sqlite"
+    }
+  },
+  "APPSTATEPATH": "appstate.json",
+  "FCAOption": {
+    "forceLogin": true,
+    "listenEvents": true,
+    "pauseLog": true,
+    "logLevel": "error",
+    "selfListen": false,
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Mobile/15E148 Safari/604.1"
+  },
+  "version": "1.2.14",
   "reactUnsend": ["💩", "😡", "👎", "😠", "🚮", "🤬"],
-  "adminOnly": true,
-  "ndhOnly": true,
-  "adminPaOnly": true,
-
+  "credit": {
+    "creator": "Rasel Mahmud",
+    "uid": "100024220646",
+    "facebook": "https://www.facebook.com/raselmahmud.q",
+    "youtube": "https://youtube.com/@rmsilentgaming?si=YHdjRar1zZHOesPF"
+  },
+  "menu": {
+    "autoUnsend": true,
+    "delayUnsend": 55
+  },
+  "rankup": {
+    "autoUnsend": true,
+    "unsendMessageAfter": 10
+  },
+  "help": {
+    "autoUnsend": true,
+    "delayUnsend": 120
+  },
+  "help2": {
+    "autoUnsend": true,
+    "delayUnsend": 300
+  },
+  "help3": {
+    "autoUnsend": true,
+    "delayUnsend": 300
+  },
   "adminUpdate": {
     "autoUnsend": true,
     "sendNoti": true,
     "timeToUnsend": 10
   },
-
-  "help": {
-    "autoUnsend": true,
-    "delayUnsend": 120
+  "log": {
+    "enable": true
   },
-
-  "autoReplyRules": {
-    "enable": true,
-    "keywords": {
-      "hello": "🎶 𝑴𝑨𝑮𝑰𝑪 𝑶𝑭 𝑺𝑶𝑼𝑵𝑫 আপনার সেবা পেতে প্রস্তুত 🪄",
-      "Magic of sound": "✨ হ্যাঁ, আমি আছি — 𝑴𝑨𝑮𝑰𝑪 𝑶𝑭 𝑺𝑶𝑼𝑵𝑫 🎧",
-      "magic of sound": "✨ হ্যাঁ, আমি আছি — 𝑴𝑨𝑮𝑰𝑪 𝑶𝑭 𝑺𝑶𝑼𝑵𝑫 🎧",
-      "Magic Of Sound": "✨ হ্যাঁ, আমি আছি — 𝑴𝑨𝑮𝑰𝑪 𝑶𝑭 𝑺𝑶𝑼𝑵𝑫 🎧",
-      "MAGIC OF SOUND": "✨ হ্যাঁ, আমি আছি — 𝑴𝑨𝑮𝑰𝑪 𝑶𝑭 𝑺𝑶𝑼𝑵𝑫 🎧",
-      "bye": "আবার দেখা হবে 👋",
-      "tata": "আল্লাহ হাফেজ 🌙",
-      "allah hafiz": "আল্লাহ হাফেজ 🤲",
-      "allah hafez": "আল্লাহ হাফেজ 🤲",
-      "allah hafej": "আল্লাহ হাফেজ 🤲",
-      "bidai": "বিদায়, ভালো থেকো 🌸",
-      "jaiga": "তুমি চলে যাচ্ছো নাকি? 🕊️",
-      "বিদাই": "বিদায়, দেখা হবে আবার 🌙",
-      "আল্লাহ হাফিজ": "আল্লাহ তোমার সহায় হোন 🤲",
-      "আল্লাহ হাফেজ": "আল্লাহ তোমার সহায় হোন 🤲"
-    }
-  },
-
-  "mentionReaction": {
-    "enable": true,
-    "defaultEmoji": "👀"
-  },
-
-  "dailyScheduler": {
-    "enable": true,
-    "time": "08:00",
-    "message": "🌞 শুভ সকাল! নতুন দিন, নতুন সম্ভাবনা।"
-  },
-
-  "apiIntegration": {
-    "enableWeather": true,
-    "weatherApiKey": "",
-    "defaultCity": "Dhaka"
-  },
-
-  "antiSpam": {
-    "enable": true,
-    "cooldownTime": 5
-  }
+  "adminOnly": false,
+  "ndhOnly": false,
+  "adminPaOnly": false
 }
