@@ -3,4 +3,4 @@ error_message = Something went wrong! Please try again.
 weather_report = Weather Report
 invalid_city = Invalid city name.
 bot_name = ༊✨MAGIC🔹OF🔸SOUND✨᯾
-help_message = Type !help to see all commands.
+help_message = Type *help to see all commands.
