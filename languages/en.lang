@@ -1,4 +1,10 @@
+# If you want to move down the line, please use \n. e.g: RaselMahmud\nRasel.
+# After changed, you have to restart the bot to use.
+# Put the # character at the beginning of each sentence if you don't want the code to run those lines. 
+# Thanks to https://www.facebook.com/duong.than.net for translate to English!
+
 # Rasel.js
+
 rasel.newVersionDetected=You are using version %1, the latest version is %2. Please update to the latest version.
 rasel.errorFormat=Malformed module!
 rasel.nameExist=Module's name is similar to another module!
@@ -15,3 +21,85 @@ rasel.notFoundPathAppstate=Error: can't find appstate file, maybe file is malfor
 rasel.handleListenError=handleListen has encountered an unexpected error, error : %1
 rasel.successConnectDatabase=Connected to database successfully!
 rasel.failConnectDatabase=Failed to connect to database, error: %1
+
+# includes/listen.js
+
+listen.startLoadEnvironment=Proceed to load the environment variable ...
+listen.loadedEnvironmentThread=Loaded thread environment variable successfully 
+listen.loadedEnvironmentUser=Loaded user environment variable successfully 
+listen.successLoadEnvironment=Loaded environment variable successfully 
+listen.failLoadEnvironment=Can't load environment variable, error: %1
+
+# includes/controller/currencies.js
+
+currencies.needObjectOrArray=Have to be an Array or an Object or maybe both
+currencies.needObject=Have to be an Object
+currencies.needNumber= Have to be an number
+
+# includes/controller/threads.js
+
+threads.needObjectOrArray=Have to be an Array or an Object or maybe both
+threads.needObject=Have to be an Object 
+
+# includes/controller/users.js
+
+users.needObjectOrArray=Have to be an Array or an Object or maybe both
+users.needObject=Have to be an Object
+
+# includes/handle/handleCommand.js
+
+handleCommand.userBanned=Group Has Been Banned..!⛔️\nPlease Contact Owner Rasel Mahmud  For Unban ⚠️
+handleCommand.threadBanned=Group Has Been Banned..!⛔️\nPlease Contact Owner Rasel Mahmud  For Unban ⚠️
+handleCommand.commandNotExist=✨ Assalamu Alaikum! 💖🌟\n The command you gave is not valid here.\n\nCould it be— \n\n•—» %1  «—•".
+handleCommand.commandThreadBanned=Your thread is unable to use command "%1"
+handleCommand.commandUserBanned=You are unable to use command "%1"
+handleCommand.threadNotAllowNSFW=This Commnd Only use Andmi
+handleCommand.cantGetInfoThread=Can't get your thread's info, error: %1
+handleCommand.permssionNotEnough="%1"\n⎯⎯⎯⎯⎯⎯\n\n✨ Only Rasel Mahmud is authorized to use this command.
+handleCommand.cantSetMessageReaction=Having some unexpected error at setMessageReaction, error: %1
+handleCommand.executeCommand=[ %1 ] Command used: %2 by user: %3 at thread: %4 | Args included: %5 | Processing time: %6ms
+handleCommand.commandError=Having some unexpected error when using command %1, error: %2
+
+# includes/handle/handleCommandEvent.js
+
+handleCommandEvent.moduleError=Having some unexpected error when using command %1, error: %2
+
+# includes/handle/handleCreateDatabase.js
+
+handleCreateDatabase.newThread=new thread: %1
+handleCreateDatabase.newUser=new user %1
+
+# includes/handle/handleEvent.js
+
+handleEvent.executeEvent=[ %1 ] Event was executed: %2 at thread: %3 | Processing time: %4ms
+handleEvent.eventError=Having some error when executing event %1, error: %12
+
+# includes/handle/handleReaction.js
+
+handleReaction.missingValue=Missing value to respond your problem
+handleReaction.executeError=Having some error when responding to your problem, error: %1
+
+# includes/handle/handleReply.js
+
+handleReply.missingValue=Missing value to respond your problem
+handleReply.executeError=Having some error when responding your problem, error: %1
+
+# includes/handle/handleSchedule.js
+
+handleSchedule.exectuteError=Having some error when schedule at module %1, error: %2
+
+# utils/index.js
+
+utils.throwError=ℹ️ [!] ɪғ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ɴᴏᴛ ᴡᴏʀᴋɪɴɢ, ᴘʟᴇᴀsᴇ ᴜsᴇ ᴀɴᴏᴛʜᴇʀ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ. %1help %2 ᴜsᴇ ғᴏʀ ᴍᴏʀᴇ ᴜsᴀɢᴇ💙🥺
+# updater.js
+
+updater.latestVersion=You are using the latest version
+updater.cantFindVersion=You are using an undefined version (%1), please check your package.json file again
+updater.newVersions=There are %1 new versions to update, starting to update...
+updater.updateSuccess=Update successfully%1
+updater.configChanged=The %1 has been changed, please check your config.json file again
+updater.installingPackages=Installing dependencies for bot...
+updater.installSuccess=Installed dependencies successfully, restart the bot to use the new version
+updater.backupSuccess=Successfully backed up changed files, see in the %1 folder
+updater.restartToApply=. Restart the bot to apply the new version
+updater.skipFile=There is a new version of the %1 file, but you have skipped this file during the update process with the comment %2 in this file
