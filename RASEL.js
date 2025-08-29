@@ -1,5 +1,5 @@
 const moment = require("moment-timezone");
-const { readdirSync, readFileSync, writeFileSync, existsSync, unlinkSync, rm } = require("fs-extra");
+const { readdirSync, readFileSync, writeFileSync, existsSync, unlinkSync } = require("fs-extra");
 const { join, resolve } = require("path");
 const { execSync } = require('child_process');
 const logger = require("./utils/log.js");
@@ -8,212 +8,163 @@ const axios = require("axios");
 const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
 const listbuiltinModules = require("module").builtinModules;
 
-global.client = new Object({
+global.client = {
     commands: new Map(),
     events: new Map(),
     cooldowns: new Map(),
-    eventRegistered: new Array(),
-    handleSchedule: new Array(),
-    handleReaction: new Array(),
-    handleReply: new Array(),
+    eventRegistered: [],
+    handleSchedule: [],
+    handleReaction: [],
+    handleReply: [],
     mainPath: process.cwd(),
-    configPath: new String(),
-  getTime: function (option) {
-        switch (option) {
-            case "seconds":
-                return `${moment.tz("Asia/Dhaka").format("ss")}`;
-            case "minutes":
-                return `${moment.tz("Asia/Dhaka").format("mm")}`;
-            case "hours":
-                return `${moment.tz("Asia/Dhaka").format("HH")}`;
-            case "date": 
-                return `${moment.tz("Asia/Dhaka").format("DD")}`;
-            case "month":
-                return `${moment.tz("Asia/Dhaka").format("MM")}`;
-            case "year":
-                return `${moment.tz("Asia/Dhaka").format("YYYY")}`;
-            case "fullHour":
-                return `${moment.tz("Asia/Dhaka").format("HH:mm:ss")}`;
-            case "fullYear":
-                return `${moment.tz("Asia/Dhaka").format("DD/MM/YYYY")}`;
-            case "fullTime":
-                return `${moment.tz("Asia/Dhaka").format("HH:mm:ss DD/MM/YYYY")}`;
+    configPath: "",
+    getTime: function(option) {
+        switch(option) {
+            case "seconds": return `${moment.tz("Asia/Dhaka").format("ss")}`;
+            case "minutes": return `${moment.tz("Asia/Dhaka").format("mm")}`;
+            case "hours": return `${moment.tz("Asia/Dhaka").format("HH")}`;
+            case "date": return `${moment.tz("Asia/Dhaka").format("DD")}`;
+            case "month": return `${moment.tz("Asia/Dhaka").format("MM")}`;
+            case "year": return `${moment.tz("Asia/Dhaka").format("YYYY")}`;
+            case "fullHour": return `${moment.tz("Asia/Dhaka").format("HH:mm:ss")}`;
+            case "fullYear": return `${moment.tz("Asia/Dhaka").format("DD/MM/YYYY")}`;
+            case "fullTime": return `${moment.tz("Asia/Dhaka").format("HH:mm:ss DD/MM/YYYY")}`;
         }
-  }
-});
+    }
+};
 
-global.data = new Object({
+global.data = {
     threadInfo: new Map(),
     threadData: new Map(),
     userName: new Map(),
     userBanned: new Map(),
     threadBanned: new Map(),
     commandBanned: new Map(),
-    threadAllowNSFW: new Array(),
-    allUserID: new Array(),
-    allCurrenciesID: new Array(),
-    allThreadID: new Array()
-});
+    threadAllowNSFW: [],
+    allUserID: [],
+    allCurrenciesID: [],
+    allThreadID: []
+};
 
 global.utils = require("./utils");
+global.nodemodule = {};
+global.config = {};
+global.configModule = {};
+global.moduleData = [];
+global.language = {};
 
-global.nodemodule = new Object();
-
-global.config = new Object();
-
-global.configModule = new Object();
-
-global.moduleData = new Array();
-
-global.language = new Object();
-
-//////////////////////////////////////////////////////////
-//========= Find and get variable from Config =========//
-/////////////////////////////////////////////////////////
-
-var configValue;
+//========= Load Config =========//
 try {
     global.client.configPath = join(global.client.mainPath, "config.json");
-    configValue = require(global.client.configPath);
+    var configValue = require(global.client.configPath);
     logger.loader("Found file config: config.json");
-}
-catch {
+} catch {
     if (existsSync(global.client.configPath.replace(/\.json/g,"") + ".temp")) {
-        configValue = readFileSync(global.client.configPath.replace(/\.json/g,"") + ".temp");
-        configValue = JSON.parse(configValue);
+        configValue = JSON.parse(readFileSync(global.client.configPath.replace(/\.json/g,"") + ".temp"));
         logger.loader(`Found: ${global.client.configPath.replace(/\.json/g,"") + ".temp"}`);
-    }
-    else return logger.loader("config.json not found!", "error");
+    } else return logger.loader("config.json not found!", "error");
 }
 
 try {
-    for (const key in configValue) global.config[key] = configValue[key];
+    for(const key in configValue) global.config[key] = configValue[key];
     logger.loader("Config Loaded!");
-}
-catch { return logger.loader("Can't load file config!", "error") }
+} catch { return logger.loader("Can't load file config!", "error"); }
 
-const { Sequelize, sequelize } = require("./includes/database");
-
+//========= Write temp config =========//
 writeFileSync(global.client.configPath + ".temp", JSON.stringify(global.config, null, 4), 'utf8');
 
-/////////////////////////////////////////
-//========= Load language use =========//
-/////////////////////////////////////////
-
-const langFile = (readFileSync(`${__dirname}/languages/${global.config.language || "en"}.lang`, { encoding: 'utf-8' })).split(/\r?\n|\r/);
-const langData = langFile.filter(item => item.indexOf('#') != 0 && item != '');
-for (const item of langData) {
-    const getSeparator = item.indexOf('=');
-    const itemKey = item.slice(0, getSeparator);
-    const itemValue = item.slice(getSeparator + 1, item.length);
-    const head = itemKey.slice(0, itemKey.indexOf('.'));
-    const key = itemKey.replace(head + '.', '');
-    const value = itemValue.replace(/\\n/gi, '\n');
-    if (typeof global.language[head] == "undefined") global.language[head] = new Object();
+//========= Load Language =========//
+const langFile = readFileSync(join(__dirname, "languages", global.config.language || "en" + ".lang"), "utf-8").split(/\r?\n|\r/);
+const langData = langFile.filter(line => line && line.indexOf("#") !== 0);
+for(const item of langData) {
+    const sep = item.indexOf("=");
+    const keyFull = item.slice(0, sep);
+    const value = item.slice(sep + 1).replace(/\\n/g,"\n");
+    const head = keyFull.slice(0, keyFull.indexOf("."));
+    const key = keyFull.replace(head + ".", "");
+    if(!global.language[head]) global.language[head] = {};
     global.language[head][key] = value;
 }
 
-global.getText = function (...args) {
-    const langText = global.language;    
-    if (!langText.hasOwnProperty(args[0])) throw `${__filename} - Not found key language: ${args[0]}`;
+global.getText = function(...args) {
+    const langText = global.language;
+    if(!langText.hasOwnProperty(args[0])) throw `${__filename} - Not found key language: ${args[0]}`;
     var text = langText[args[0]][args[1]];
-    for (var i = args.length - 1; i > 0; i--) {
-        const regEx = RegExp(`%${i}`, 'g');
-        text = text.replace(regEx, args[i + 1]);
-    }
+    for(var i=args.length-1; i>0; i--) text = text.replace(new RegExp(`%${i}`, "g"), args[i+1]);
     return text;
 }
 
+//========= Load AppState =========//
+let appStateFile;
+let appState;
 try {
-    var appStateFile = resolve(join(global.client.mainPath, global.config.APPSTATEPATH || "appstate.json"));
-    var appState = require(appStateFile);
-    logger.loader(global.getText("RASEL", "foundPathAppstate"))
+    appStateFile = resolve(join(global.client.mainPath, global.config.APPSTATEPATH || "appstate.json"));
+    appState = require(appStateFile);
+    logger.loader(global.getText("RASEL","foundPathAppstate"));
+} catch {
+    return logger.loader(global.getText("RASEL","notFoundPathAppstate"), "error");
 }
-catch { return logger.loader(global.getText("RASEL", "notFoundPathAppstate"), "error") }
 
-//========= Login account and start Listen Event =========//
+//========= Bot Login & Start =========//
+async function onBot({ models }) {
+    const loginData = { appState };
+    login(loginData, async (err, api) => {
+        if(err) return logger(JSON.stringify(err), "error");
+        api.setOptions(global.config.FCAOption);
+        writeFileSync(appStateFile, JSON.stringify(api.getAppState(), null, 4));
+        global.client.api = api;
+        global.client.timeStart = Date.now();
+        global.config.version = "1.2.14";
 
-function onBot({ models: botModel }) {
-    const loginData = {};
-    loginData['appState'] = appState;
-    login(loginData, async(loginError, loginApiData) => {
-        if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
-        loginApiData.setOptions(global.config.FCAOption)
-        writeFileSync(appStateFile, JSON.stringify(loginApiData.getAppState(), null, '\x09'))
-        global.client.api = loginApiData
-        global.config.version = '1.2.14'
-        global.client.timeStart = new Date().getTime(),
-            function () {
-                const listCommand = readdirSync(global.client.mainPath + '/Priyansh/commands').filter(command => command.endsWith('.js') && !command.includes('example') && !global.config.commandDisabled.includes(command));
-                for (const command of listCommand) {
-                    try {
-                        var module = require(global.client.mainPath + '/Priyansh/commands/' + command);
-                        if (!module.config || !module.run || !module.config.commandCategory) throw new Error(global.getText('RASEL', 'errorFormat'));
-                        if (global.client.commands.has(module.config.name || '')) throw new Error(global.getText('RASEL', 'nameExist'));
-                        if (!module.languages || typeof module.languages != 'object' || Object.keys(module.languages).length == 0) logger.loader(global.getText('RASEL', 'notFoundLanguage', module.config.name), 'warn');
-                        if (module.config.dependencies && typeof module.config.dependencies == 'object') {
-                            for (const reqDependencies in module.config.dependencies) {
-                                const reqDependenciesPath = join(__dirname, 'nodemodules', 'node_modules', reqDependencies);
-                                try {
-                                    if (!global.nodemodule.hasOwnProperty(reqDependencies)) {
-                                        if (listPackage.hasOwnProperty(reqDependencies) || listbuiltinModules.includes(reqDependencies)) global.nodemodule[reqDependencies] = require(reqDependencies);
-                                        else global.nodemodule[reqDependencies] = require(reqDependenciesPath);
-                                    } else '';
-                                } catch {
-                                    var check = false;
-                                    var isError;
-                                    logger.loader(global.getText('RASEL', 'notFoundPackage', reqDependencies, module.config.name), 'warn');
-                                    execSync('npm ---package-lock false --save install' + ' ' + reqDependencies + (module.config.dependencies[reqDependencies] == '*' || module.config.dependencies[reqDependencies] == '' ? '' : '@' + module.config.dependencies[reqDependencies]), { 'stdio': 'inherit', 'env': process['env'], 'shell': true, 'cwd': join(__dirname, 'nodemodules') });
-                                    for (let i = 1; i <= 3; i++) {
-                                        try {
-                                            require['cache'] = {};
-                                            if (listPackage.hasOwnProperty(reqDependencies) || listbuiltinModules.includes(reqDependencies)) global['nodemodule'][reqDependencies] = require(reqDependencies);
-                                            else global['nodemodule'][reqDependencies] = require(reqDependenciesPath);
-                                            check = true;
-                                            break;
-                                        } catch (error) { isError = error; }
-                                        if (check || !isError) break;
-                                    }
-                                    if (!check || isError) throw global.getText('RASEL', 'cantInstallPackage', reqDependencies, module.config.name, isError);
-                                }
-                            }
-                            logger.loader(global.getText('RASEL', 'loadedPackage', module.config.name));
-                        }
-                        if (module.config.envConfig) try {
-                            for (const envConfig in module.config.envConfig) {
-                                if (typeof global.configModule[module.config.name] == 'undefined') global.configModule[module.config.name] = {};
-                                if (typeof global.config[module.config.name] == 'undefined') global.config[module.config.name] = {};
-                                if (typeof global.config[module.config.name][envConfig] !== 'undefined') global['configModule'][module.config.name][envConfig] = global.config[module.config.name][envConfig];
-                                else global.configModule[module.config.name][envConfig] = module.config.envConfig[envConfig] || '';
-                                if (typeof global.config[module.config.name][envConfig] == 'undefined') global.config[module.config.name][envConfig] = module.config.envConfig[envConfig] || '';
-                            }
-                            logger.loader(global.getText('RASEL', 'loadedConfig', module.config.name));
-                        } catch (error) {
-                            throw new Error(global.getText('RASEL', 'loadedConfig', module.config.name, JSON.stringify(error)));
-                        }
-                        if (module.onLoad) {
-                            try {
-                                const moduleData = {};
-                                moduleData.api = loginApiData;
-                                moduleData.models = botModel;
-                                module.onLoad(moduleData);
-                            } catch (_0x20fd5f) {
-                                throw new Error(global.getText('RASEL', 'cantOnload', module.config.name, JSON.stringify(_0x20fd5f)), 'error');
-                            };
-                        }
-                        if (module.handleEvent) global.client.eventRegistered.push(module.config.name);
-                        global.client.commands.set(module.config.name, module);
-                        logger.loader(global.getText('RASEL', 'successLoadModule', module.config.name));
-                    } catch (error) {
-                        logger.loader(global.getText('RASEL', 'failLoadModule', module.config.name, error), 'error');
-                    };
-                }
-            }(),
-            function() {
-                const events = readdirSync(global.client.mainPath + '/Priyansh/events').filter(event => event.endsWith('.js') && !global.config.eventDisabled.includes(event));
-                for (const ev of events) {
-                    try {
-                        var event = require(global.client.mainPath + '/Priyansh/events/' + ev);
-                        if (!event.config || !event.run) throw new Error(global.getText('RASEL', 'errorFormat'));
-                        if (global.client.events.has(event.config.name) || '') throw new Error(global.getText('RASEL', 'nameExist'));
-                        if (event.config.dependencies && typeof event.config.dependencies == 'object')
+        //========= Load Commands =========//
+        const commandFiles = readdirSync(join(global.client.mainPath, "Script/commands")).filter(f=>f.endsWith(".js"));
+        for(const cmd of commandFiles) {
+            try {
+                const module = require(join(global.client.mainPath,"Script/commands", cmd));
+                if(!module.config || !module.run || !module.config.commandCategory) throw new Error(global.getText("RASEL","errorFormat"));
+                global.client.commands.set(module.config.name, module);
+                logger.loader(global.getText("RASEL","successLoadModule", module.config.name));
+            } catch(err) {
+                logger.loader(global.getText("RASEL","failLoadModule", cmd, err), "error");
+            }
+        }
+
+        //========= Load Events =========//
+        const eventFiles = readdirSync(join(global.client.mainPath, "Script/events")).filter(f=>f.endsWith(".js"));
+        for(const ev of eventFiles) {
+            try {
+                const module = require(join(global.client.mainPath,"Script/events", ev));
+                if(!module.config || !module.run) throw new Error(global.getText("RASEL","errorFormat"));
+                global.client.events.set(module.config.name, module);
+                logger.loader(global.getText("RASEL","successLoadModule", module.config.name));
+            } catch(err) {
+                logger.loader(global.getText("RASEL","failLoadModule", ev, err), "error");
+            }
+        }
+
+        logger.loader(global.getText("RASEL","finishLoadModule", global.client.commands.size, global.client.events.size));
+
+        //========= Listen Messages =========//
+        const listener = require('./includes/listen')({ api, models });
+        global.handleListen = api.listenMqtt((err, message) => {
+            if(err) return logger(global.getText("RASEL","handleListenError", JSON.stringify(err)), "error");
+            if(["presence","typ","read_receipt"].includes(message.type)) return;
+            return listener(message);
+        });
+    });
+}
+
+//========= Database Connect =========//
+(async () => {
+    const { Sequelize, sequelize } = require("./includes/database");
+    try {
+        await sequelize.authenticate();
+        const models = require('./includes/database/model')({ Sequelize, sequelize });
+        logger(global.getText("RASEL","successConnectDatabase"), "[ DATABASE ]");
+        onBot({ models });
+    } catch(err) {
+        logger(global.getText("RASEL","successConnectDatabase", JSON.stringify(err)), "[ DATABASE ]");
+    }
+})();
+
+process.on('unhandledRejection', (err, p) => {});
