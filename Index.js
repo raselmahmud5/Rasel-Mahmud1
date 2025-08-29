@@ -69,7 +69,7 @@ axios.get("https://raw.githubusercontent.com/raselmahmud5/Rasel-Mahmud1/main/pac
         logger(res.data.description, "[ DESCRIPTION ]");
     })
     .catch((err) => {
-        logger(`Failed to fetch update info: ${err.message}`, "[ Update Error ]`);
+        logger(`Failed to fetch update info: ${err.message}`, "[ Update Error ]");
     });
 
 //////////////////////////////////////////////////////////
