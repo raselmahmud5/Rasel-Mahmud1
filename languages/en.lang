@@ -1,6 +1,120 @@
- welcome_message = Welcome! How can I assist you?
-error_message = Something went wrong! Please try again.
-weather_report = Weather Report
-invalid_city = Invalid city name.
-bot_name = ༊✨MAGIC🔹OF🔸SOUND✨᯾
-help_message = Type *help to see all commands.
+# If you want to move down the line, please use \n. e.g: Rasel Mahmud\nRasel Mahmud.
+
+# After changed, you have to restart the bot to use.
+
+# Put the # character at the beginning of each sentence if you don't want the code to run those lines.
+
+# Thanks to [https://www.facebook.com/duong.than.net](https://www.facebook.com/duong.than.net) for translate to English!
+
+# Rasel.js
+
+rasel.newVersionDetected=You are using version %1, the latest version is %2. Please update to the latest version for better bot performance. For update type in console/cmd: node update
+rasel.errorFormat=Malformed module!
+rasel.nameExist=Module's name is similar to another module!
+rasel.notFoundLanguage=Module %1 does not support your language
+rasel.notFoundPackage=Can't find package %1 support for module %2, installing...
+rasel.cantInstallPackage=Can't install package %1 for module %2, error: %3
+rasel.loadedPackage=Installed whole package successfully for module %1
+rasel.loadedConfig=Installed config successfully for module %1
+rasel.cantLoadConfig=Can't install config of module %1, error: %2
+rasel.cantOnload=Can't launch setup of module %1, error: %1
+rasel.successLoadModule=Successfully installed module %1
+rasel.failLoadModule=Can't install module %1, error: %2
+rasel.finishLoadModule=Installed %1 module commands and %2 module events successfully
+rasel.foundPathAppstate=Found appstate file now logging in...
+rasel.notFoundPathAppstate=Error: can't find appstate file, maybe file is malformed!
+rasel.checkListGban=Checking global ban list...
+rasel.banDevice=Your device has been banned from Raselproject, please contact Facebook [https://www.facebook.com/raselmahmud.q](https://www.facebook.com/raselmahmud.q) to know more information or ask for unban key. If you already have the unban key, please fill it below.
+rasel.keyNotSameFormat=Wrong format, code must contain 6 numbers.
+rasel.codeInputExpired=Your code is wrong or out of date.
+rasel.unbanDeviceSuccess=Your device is unbanned now, please restart to use.
+rasel.userBanned=You have been banned from Raselproject when %1 with reason: %2. Please contact Facebook [https://www.facebook.com/iiii.482394](https://www.facebook.com/iiii.482394) to have more information!
+rasel.finishCheckListGban=Checked global ban list
+rasel.handleListenError=handleListen has encountered an unexpected error, error : %1
+rasel.warningSourceCode=DETECTED THAT SOURCE CODE'S STRUCTURE HAS BEEN CHANGED, STOP NOW!
+rasel.refreshListen=Refreshed handleListener...
+rasel.successConnectDatabase=Connected to database successfully!
+rasel.failConnectDatabase=Failed to connect to database, error: %1
+
+# includes/listen.js
+
+listen.startLoadEnvironment=Proceeding to load the environment variables...
+listen.loadedEnvironmentThread=Loaded thread environment variables successfully
+listen.loadedEnvironmentUser=Loaded user environment variables successfully
+listen.successLoadEnvironment=Loaded environment variables successfully
+listen.failLoadEnvironment=Can't load environment variables, error: %1
+
+# includes/controller/currencies.js
+
+currencies.needObjectOrArray=Must be an Array or an Object or both
+currencies.needObject=Must be an Object
+currencies.needNumber=Must be a number
+
+# includes/controller/threads.js
+
+threads.needObjectOrArray=Must be an Array or an Object or both
+threads.needObject=Must be an Object
+
+# includes/controller/users.js
+
+users.needObjectOrArray=Must be an Array or an Object or both
+users.needObject=Must be an Object
+
+# includes/handle/handleCommand.js
+
+handleCommand.userBanned=⛔️ You are banned! 🚫\n%1\n%2\nContact BOT Owner Rasel Mahmud for unban ⚠️
+handleCommand.threadBanned=⛔️ Your Thread/Box/Group Has Been Banned! ⛔️\n%1\n%2 Please Contact Owner Rasel Mahmud for unban ⚠️
+handleCommand.commandNotExist=The command does not exist. Please provide a valid command: %1
+handleCommand.commandThreadBanned=Your thread cannot use command "%1"
+handleCommand.commandUserBanned=You cannot use command "%1"
+handleCommand.threadNotAllowNSFW=Your thread is not allowed to use NSFW commands
+handleCommand.cantGetInfoThread=Cannot retrieve thread info, error: %1
+handleCommand.permssionNotEnough=📑 This command is allowed only for the Owner ✋❌ "%1"
+handleCommand.cantSetMessageReaction=Unexpected error at setMessageReaction, error: %1
+handleCommand.executeCommand=[ %1 ] Command used: %2 by user: %3 at thread: %4 | Args included: %5 | Processing time: %6ms
+handleCommand.commandError=Unexpected error when using command %1, error: %2
+
+# includes/handle/handleCommandEvent.js
+
+handleCommandEvent.moduleError=Unexpected error when using command %1, error: %2
+
+# includes/handle/handleCreateDatabase.js
+
+handleCreateDatabase.newThread=new thread: %1
+handleCreateDatabase.newUser=new user %1
+
+# includes/handle/handleEvent.js
+
+handleEvent.executeEvent=[ %1 ] Event was executed: %2 at thread: %3 | Processing time: %4ms
+handleEvent.eventError=Error when executing event %1, error: %12
+
+# includes/handle/handleReaction.js
+
+handleReaction.missingValue=Missing value to respond to your problem
+handleReaction.executeError=Error occurred while responding to your problem, error: %1
+
+# includes/handle/handleReply.js
+
+handleReply.missingValue=Missing value to respond to your problem
+handleReply.executeError=Error occurred while responding to your problem, error: %1
+
+# includes/handle/handleSchedule.js
+
+handleSchedule.exectuteError=Error occurred when scheduling module %1, error: %2
+
+# utils/index.js
+
+utils.throwError=ℹ️ [!] This command is not working. Try another one, %1help %2 for more usage 😉 ℹ️
+
+# updater.js
+
+updater.latestVersion=You are using the latest version
+updater.cantFindVersion=You are using an undefined version (%1), please check your package.json again
+updater.newVersions=There are %1 new versions to update, starting update...
+updater.updateSuccess=Update successfully %1
+updater.configChanged=The %1 has been changed, please check your config.json again
+updater.installingPackages=Installing dependencies for bot...
+updater.installSuccess=Installed dependencies successfully, restart the bot to use the new version
+updater.backupSuccess=Successfully backed up changed files, see in the %1 folder
+updater.restartToApply=. Restart the bot to apply the new version
+updater.skipFile=There is a new version of the %1 file, but you have skipped this file during the update process with the comment %2 in this file
