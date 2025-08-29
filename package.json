@@ -1,8 +1,8 @@
 {
-  "name": "magic-of-sound-bot",
+  "name": "༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾",
   "version": "10.1.1",
-  "description": "A Messenger bot named ༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾ developed by Rasel Mahmud.",
-  "main": "RASEL.js",
+  "description": "A Messenger bot named ༊✨𝐌𝐀𝐆𝐈𝐂🔹𝐎𝐅🔸𝐒𝐎𝐔𝐍𝐃✨᯾ developed by Rasel Mahmud",
+  "main": "Rasel.js",
   "engines": {
       "node": "20.x",
       "npm": "10.0.0"
@@ -14,24 +14,25 @@
   },
   "repository": {
       "type": "git",
-      "url": "https://github.com/raselmahmud5/Rasel-Mahmud1/issues"
+      "url": "https://github.com/raselmahmud5/Rasel-Mahmud1.git"
   },
   "keywords": [
       "bot",
       "facebook",
-      "projectrasel",
+      "Raselproject",
       "messenger",
       "javasvript",
-      "raselmahmud",
-      "sound",
-      "magic"
+      "Magicofsound",
+      "Raselmaud",
+      "Rasel",
+      "Magic chat bot"
   ],
-  "author": "Rasel Mahmud",
+  "author": "Rasel",
   "license": "GPL-3.0",
   "bugs": {
       "url": "https://github.com/raselmahmud5/Rasel-Mahmud1/issues"
   },
-  "homepage": "https://github.com/raselmahmud5/Rasel-Mahmud1#readme",
+  "homepage": "https://github.com/raselmahmud5/Rasel-Mahmud1/issues",
   "dependencies": {
       "@distube/ytdl-core": "^4.13.2",
       "@miraipr0ject/assets": "^1.0.9",
@@ -53,6 +54,8 @@
       "crypto": "^1.0.1",
       "crypto-js": "^4.1.1",
       "discord-chatbot": "^2.1.0",
+      "discord-image-generation": "^1.4.13",
+      "discord.js": "^12.5.3",
       "eval": "^0.1.8",
       "express": "^4.19.2",
       "extract-zip": "^2.0.1",
@@ -104,6 +107,7 @@
       "sqlite3": "^5.1.1",
       "string-similarity": "^4.0.4",
       "systeminformation": "^5.21.11",
+      "shaon-videos-downloader": "^1.0.1",
       "tempy": "^0.4.0",
       "tinyurl": "^1.1.7",
       "to": "^0.2.9",
@@ -113,10 +117,12 @@
       "vtuber-wiki": "^1.1.5",
       "websocket-stream": "^5.5.2",
       "wikijs": "^6.3.3",
+      "ws3-fca": "^1.0.23",
       "youtube-search-api": "^1.1.0",
       "youtubei.js": "^1.4.5",
       "yt-search": "^2.10.4",
       "ytdl-core": "^4.11.2",
+      "unofficial-fb-chat-api": "^1.0.0",
       "zalgo": "0.0.1"
   }
 }
