@@ -84,4 +84,3 @@ logger("UIDs: 100024220812646, 61571550050635", "[ UID INFO ]");
 
 // Start both bots
 startBot("RASEL.js", "Starting Rasel Mahmud Bot");
-startBot("Priyansh.js", "Starting Priyansh Bot");
